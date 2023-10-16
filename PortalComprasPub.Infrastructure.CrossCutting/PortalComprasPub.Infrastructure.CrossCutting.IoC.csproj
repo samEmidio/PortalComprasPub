@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PortalComprasPub.Application\PortalComprasPub.Application.csproj" />
     <ProjectReference Include="..\PortalComprasPub.Infrastructure\PortalComprasPub.Infrastructure.Data.csproj" />
   </ItemGroup>
 
