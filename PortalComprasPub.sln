@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalComprasPub.Infrastruc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalComprasPub.Domain.Core", "PortalComprasPub.Domain.Core\PortalComprasPub.Domain.Core.csproj", "{A4F8F0DC-01B3-4505-88EB-4AA160DDF775}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalComprasPub.Application.Tests", "PortalComprasPub.Application.Tests\PortalComprasPub.Application.Tests.csproj", "{773C0A27-DECF-4548-8E59-CC74B0A6010F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{A4F8F0DC-01B3-4505-88EB-4AA160DDF775}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4F8F0DC-01B3-4505-88EB-4AA160DDF775}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4F8F0DC-01B3-4505-88EB-4AA160DDF775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{773C0A27-DECF-4548-8E59-CC74B0A6010F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773C0A27-DECF-4548-8E59-CC74B0A6010F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773C0A27-DECF-4548-8E59-CC74B0A6010F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773C0A27-DECF-4548-8E59-CC74B0A6010F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{87C0C532-BCC0-43C2-B1CE-5F5EE905476A} = {4862108E-3B5A-40AC-AFBE-214F39972E1D}
 		{A5F6AE23-9018-47A9-AA35-7281A156BCDD} = {4862108E-3B5A-40AC-AFBE-214F39972E1D}
 		{A4F8F0DC-01B3-4505-88EB-4AA160DDF775} = {4862108E-3B5A-40AC-AFBE-214F39972E1D}
+		{773C0A27-DECF-4548-8E59-CC74B0A6010F} = {4862108E-3B5A-40AC-AFBE-214F39972E1D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DAB2C816-5164-4F7E-AE04-E360382FEF68}

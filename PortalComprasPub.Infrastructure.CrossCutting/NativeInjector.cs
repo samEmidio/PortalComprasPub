@@ -30,4 +30,4 @@ namespace PortalComprasPub.Infrastructure.CrossCutting.IoC
         }
     }
 }
-}
+
