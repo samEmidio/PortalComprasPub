@@ -4,6 +4,7 @@
 
 using PortalComprasPub.Application.Interfaces;
 using PortalComprasPub.Application.ViewModels.MyEntityViewModel;
+using PortalComprasPub.Domain.Entities;
 using PortalComprasPub.Domain.Interfaces;
 
 namespace PortalComprasPub.Application.Services
@@ -17,9 +18,23 @@ namespace PortalComprasPub.Application.Services
             _uow = unitOfWork;
         }
 
-        public MyEntityViewModel Add(MyEntityCreateViewModel myEntityViewModel)
+        public MyEntityViewModel? Add(MyEntityCreateViewModel myEntityViewModel)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var entity = new MyEntity(myEntityViewModel.Name, myEntityViewModel.Age);
+
+                _uow.MyEntities.Add(entity);
+
+                _uow.Save();
+
+                return new MyEntityViewModel { Age = entity.Age, Name = entity.Name, Identifier = entity.Identifier };
+
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public bool Delete(Guid identifier)
