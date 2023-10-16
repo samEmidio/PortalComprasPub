@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PortalComprasPub.Domain.Entities;
 
-namespace AspnetCore_EFCoreInMemory.Models
+namespace PortalComprasPub.Infrastructure.Data.Context
 {
     public class PortalContext : DbContext
     {

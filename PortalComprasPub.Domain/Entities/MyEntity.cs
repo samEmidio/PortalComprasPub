@@ -1,19 +1,23 @@
+using PortalComprasPub.Domain.Core.Entities;
+
 namespace PortalComprasPub.Domain.Entities
 {
-    public class MyEntity
+    public class MyEntity : BaseEntity
     {
 
-        public MyEntity(int number)
+        public MyEntity(string name, int age)
         {
-            Number = number;
+            Name = name;
+            Age = age;
         }
-        public int Number { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
 
 
 
-        public bool IsEven()
+        public bool IsAdult()
         {
-            return Number%2 == 0;
+            return Age >= 18;
         }
 
     }

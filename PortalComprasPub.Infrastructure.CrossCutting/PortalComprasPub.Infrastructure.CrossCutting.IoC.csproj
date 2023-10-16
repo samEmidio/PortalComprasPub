@@ -8,15 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.12" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PortalComprasPub.Domain\PortalComprasPub.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\PortalComprasPub.Infrastructure\PortalComprasPub.Infrastructure.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,12 +7,4 @@
     <AnalysisMode>Minimum</AnalysisMode>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\PortalComprasPub.Domain.Core\PortalComprasPub.Domain.Core.csproj" />
-  </ItemGroup>
-
 </Project>

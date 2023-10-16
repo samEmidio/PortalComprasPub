@@ -8,17 +8,35 @@ namespace PortalComprasPub.Domain.Tests.Domain
     public class MyEntityTests
     {
         [Fact]
-        public void Is_Not_Null()
+        public void Is_Not_Adult()
         {
 
             // Arrange
-            int number = 2;
-            bool expected = true;
+            int age = 17;
+            bool expected = false;
 
-            MyEntity entity = new(number);
+            MyEntity entity = new("joaozinho", age);
 
             // Act
-            var result = entity.IsEven();
+            var result = entity.IsAdult();
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
+
+
+        [Fact]
+        public void Is_Adult()
+        {
+
+            // Arrange
+            int age = 18;
+            bool expected = true;
+
+            MyEntity entity = new("joaozinho", age);
+
+            // Act
+            var result = entity.IsAdult();
 
             // Assert
             Assert.Equal(expected, result);
