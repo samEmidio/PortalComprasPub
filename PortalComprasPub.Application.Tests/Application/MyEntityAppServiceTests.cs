@@ -42,7 +42,7 @@ namespace PortalComprasPub.Application.Tests.Application
             _myEntityRepository.Setup(x => x.Add(new MyEntity(myEntity.Name, myEntity.Age)));
             _uow.Setup(x => x.MyEntities).Returns(_myEntityRepository.Object);
             _myEntityAppService.Setup(x => x.Add(myEntity)).Returns(new MyEntityViewModel {Name = myEntity.Name,Age = myEntity.Age });
-            
+
 
             // Act
             var result = _myEntityAppService.Object.Add(myEntity);

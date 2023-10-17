@@ -12,16 +12,23 @@ namespace PortalComprasPub.Application.Services
     public class MyEntityAppService : IMyEntityAppService
     {
         private readonly IUnitOfWork _uow;
+        private readonly MyEntityCreateViewModelValidation _myEntityCreateValidation;
 
-        public MyEntityAppService(IUnitOfWork unitOfWork)
+        public MyEntityAppService(IUnitOfWork unitOfWork, MyEntityCreateViewModelValidation myEntityCreateValidation)
         {
             _uow = unitOfWork;
+            _myEntityCreateValidation = myEntityCreateValidation;
+
         }
 
         public MyEntityViewModel? Add(MyEntityCreateViewModel myEntityViewModel)
         {
             try
             {
+
+                if (!_myEntityCreateValidation.Validate(myEntityViewModel).IsValid)
+                    return null;
+                
                 var entity = new MyEntity(myEntityViewModel.Name, myEntityViewModel.Age);
 
                 _uow.MyEntities.Add(entity);
