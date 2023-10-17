@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 using PortalComprasPub.Application.Interfaces;
 using PortalComprasPub.Application.Services;
+using PortalComprasPub.Application.ViewModels.MyEntityViewModel;
 using PortalComprasPub.Domain.Interfaces;
 using PortalComprasPub.Infrastructure.Data.Context;
 using PortalComprasPub.Infrastructure.Data.Repositories;
@@ -21,6 +22,9 @@ namespace PortalComprasPub.Infrastructure.CrossCutting.IoC
 
             // Application
             services.AddScoped<IMyEntityAppService, MyEntityAppService>();
+
+            //application-validations
+            services.AddScoped<MyEntityCreateViewModelValidation>();
 
             // Domain
             services.AddScoped<IMyEntityRepository, MyEntityRepository>();
