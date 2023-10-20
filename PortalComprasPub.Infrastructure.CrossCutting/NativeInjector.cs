@@ -29,7 +29,6 @@ namespace PortalComprasPub.Infrastructure.CrossCutting.IoC
             // Domain
             services.AddScoped<IMyEntityRepository, MyEntityRepository>();
 
-
             // Infra - Data
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<PortalContext>();
