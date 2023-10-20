@@ -5,6 +5,7 @@
 using PortalComprasPub.Application.Interfaces;
 using PortalComprasPub.Application.ViewModels.MyEntityViewModel;
 using PortalComprasPub.Domain.Entities;
+using PortalComprasPub.Domain.Factory.MyEntity;
 using PortalComprasPub.Domain.Interfaces;
 
 namespace PortalComprasPub.Application.Services
@@ -28,8 +29,11 @@ namespace PortalComprasPub.Application.Services
 
                 if (!_myEntityCreateValidation.Validate(myEntityViewModel).IsValid)
                     return null;
-                
-                var entity = new MyEntity(myEntityViewModel.Name, myEntityViewModel.LastName, myEntityViewModel.Age);
+
+                MyEntityFactory factory = new ConcreteMyEntityFactory();
+                var entityfactory = factory.GetMyEntity(myEntityViewModel.Age >= 18 ? Domain.Enums.Type.entity0 : Domain.Enums.Type.entity1);
+                var entity = entityfactory.Create(myEntityViewModel.Name, myEntityViewModel.LastName, myEntityViewModel.Age);
+
 
                 _uow.MyEntities.Add(entity);
 
