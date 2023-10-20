@@ -1,19 +1,18 @@
 using PortalComprasPub.Domain.Core.Entities;
+using PortalComprasPub.Domain.ValueObjects;
 
 namespace PortalComprasPub.Domain.Entities
 {
     public class MyEntity : BaseEntity
     {
 
-        public MyEntity(string name, int age)
+        public MyEntity(string name, string lastName, int age)
         {
-            Name = name;
+            Name = FullName.Create(name, lastName);
             Age = age;
         }
-        public string Name { get; set; }
+        public FullName Name { get; set; }
         public int Age { get; set; }
-
-
 
         public bool IsAdult()
         {

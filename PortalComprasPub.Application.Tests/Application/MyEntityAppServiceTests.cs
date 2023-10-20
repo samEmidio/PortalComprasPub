@@ -34,12 +34,13 @@ namespace PortalComprasPub.Application.Tests.Application
             var myEntity = new MyEntityCreateViewModel
             {
                 Name = "fulano",
+                LastName = "silva",
                 Age = 18
             };
 
             var dbSetMock = new Mock<DbSet<MyEntity>>();
             _context.Setup(x => x.Set<MyEntity>()).Returns(dbSetMock.Object);
-            _myEntityRepository.Setup(x => x.Add(new MyEntity(myEntity.Name, myEntity.Age)));
+            _myEntityRepository.Setup(x => x.Add(new MyEntity(myEntity.Name, myEntity.LastName, myEntity.Age)));
             _uow.Setup(x => x.MyEntities).Returns(_myEntityRepository.Object);
             _myEntityAppService.Setup(x => x.Add(myEntity)).Returns(new MyEntityViewModel {Name = myEntity.Name,Age = myEntity.Age });
 

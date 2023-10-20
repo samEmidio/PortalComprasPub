@@ -15,7 +15,7 @@ namespace PortalComprasPub.Domain.Tests.Domain
             int age = 17;
             bool expected = false;
 
-            MyEntity entity = new("joaozinho", age);
+            MyEntity entity = new("joaozinho", "silva", age);
 
             // Act
             var result = entity.IsAdult();
@@ -33,7 +33,7 @@ namespace PortalComprasPub.Domain.Tests.Domain
             int age = 18;
             bool expected = true;
 
-            MyEntity entity = new("joaozinho", age);
+            MyEntity entity = new("joaozinho", "silva", age);
 
             // Act
             var result = entity.IsAdult();

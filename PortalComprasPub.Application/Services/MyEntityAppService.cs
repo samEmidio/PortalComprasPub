@@ -29,13 +29,13 @@ namespace PortalComprasPub.Application.Services
                 if (!_myEntityCreateValidation.Validate(myEntityViewModel).IsValid)
                     return null;
                 
-                var entity = new MyEntity(myEntityViewModel.Name, myEntityViewModel.Age);
+                var entity = new MyEntity(myEntityViewModel.Name, myEntityViewModel.LastName, myEntityViewModel.Age);
 
                 _uow.MyEntities.Add(entity);
 
                 _uow.Save();
 
-                return new MyEntityViewModel { Age = entity.Age, Name = entity.Name, Identifier = entity.Identifier };
+                return new MyEntityViewModel { Age = entity.Age, Name = entity.Name.FirstName, Identifier = entity.Identifier };
 
             }
             catch (Exception)

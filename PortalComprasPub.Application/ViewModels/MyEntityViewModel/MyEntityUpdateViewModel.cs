@@ -8,6 +8,7 @@ namespace PortalComprasPub.Application.ViewModels.MyEntityViewModel
     {
         public Guid Identifier { get; set; }
         public string Name { get; set; }
+        public string LastName { get; set; }
         public string Age { get; set; }
     }
 }
