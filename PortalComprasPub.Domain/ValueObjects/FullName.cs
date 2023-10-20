@@ -4,11 +4,8 @@
 
 namespace PortalComprasPub.Domain.ValueObjects
 {
-    public record FullName : ValueObject
+    public struct FullName
     {
-        public FullName()
-        {    
-        }
         
         public string FirstName { get; set; }
         public string LastName { get; set; }
